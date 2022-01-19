@@ -13,4 +13,3 @@ class Solution:
                 c=c.next
         #print(head)
         return head
-                
