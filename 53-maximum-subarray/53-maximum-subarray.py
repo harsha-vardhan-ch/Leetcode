@@ -6,6 +6,5 @@ class Solution:
             if curr<0:
                 curr=0
             curr=curr+i
-            if curr>msum:
-                msum=curr
+            msum=max(curr,msum)
         return msum
