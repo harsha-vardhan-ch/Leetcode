@@ -15,13 +15,13 @@ class Solution:
                     j=j+1
         return c
         '''      
-        not_prime = [False] * n
+        not_prime = [0] * n
         count = 0
         for i in range(2, n):
-            if not not_prime[i]:
+            if not_prime[i]==0:
                 count += 1
                 for j in range(i*i,n,i):
-                    not_prime[j] = True
+                    not_prime[j] = 1
         #print not_prime
         return count
         
