@@ -9,13 +9,10 @@ class Solution:
         post[n-1]=nums[n-1]
         for i in range(n-2,-1,-1):
             post[i]=post[i+1]*nums[i]
-
-            #ans[i] *= suffix_prod
-            #suffix_prod *= nums[i]
         for i in range(1,n-1):
             ans[i]=pre[i-1]*post[i+1]
         ans[0]=post[1]
         ans[-1]=pre[-2]
-        print(pre,post)
+        #print(pre,post)
         return ans
         
