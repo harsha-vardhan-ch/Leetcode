@@ -20,7 +20,7 @@ class Solution:
                     # del min(nums[i],nums[i+1])
                     ch=True
                 i+=1
-            print(nums)
+            # print(nums)
             n=len(nums)
             
         return nums[0]
