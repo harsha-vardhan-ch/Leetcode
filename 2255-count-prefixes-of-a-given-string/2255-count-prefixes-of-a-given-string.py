@@ -8,3 +8,10 @@ class Solution:
                 c+=1
                 
         return c
+    
+        # count=0
+        # for word in words:
+        #     if word==s[:len(word)]:
+        #         count+=1
+        # return count
+            
