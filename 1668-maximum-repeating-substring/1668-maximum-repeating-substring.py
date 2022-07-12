@@ -3,14 +3,14 @@ class Solution:
         '''
         App 1 - Bruteforce
         '''
-        count = 0
-        while word * (count + 1) in sequence:
-            count +=  1        
-        return count
+        # count = 0
+        # while word * (count + 1) in sequence:
+        #     count +=  1        
+        # return count
     
         '''
         App 2 - Through binary search
-        
+        '''
         if word not in sequence:
             return 0
 
@@ -24,4 +24,4 @@ class Solution:
                 right = mid - 1 
                 
         return left - 1
-        '''
+        
