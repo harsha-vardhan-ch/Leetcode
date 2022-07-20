@@ -14,3 +14,5 @@ class Solution:
         if ab==2:
             return False
         return True
+    
+    # return s.count('A') < 2 and 'LLL' not in s
