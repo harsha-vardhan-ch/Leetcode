@@ -2,7 +2,7 @@ class Solution:
     def isStrobogrammatic(self, num: str) -> bool:
         sing = ['1','0','8']
         if len(num)<2:
-            if num=='0' or num=='8' or num=='1':
+            if num in sing:
                 return True
             return False
         i=0
