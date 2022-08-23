@@ -10,8 +10,13 @@ class KthLargest:
 
     def add(self, val: int) -> int:
         '''
+        App 1
+        
         heapq.heappush(self.nums,val)
         return heapq.nlargest(self.k,self.nums)[-1]
+        '''
+        '''
+        App 2
         '''
         heapq.heappush(self.nums, val)
         while len(self.nums) > self.k: 
