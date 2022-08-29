@@ -1,18 +1,11 @@
 class Solution:
     def shortestDistance(self, words: List[str], word1: str, word2: str) -> int:
-        # w1c=-1
-        # w2c=-1
-        # for i in range(len(words)):
-        #     if words[i]==word1 and w1c==-1:
-        #         w1c=i
-        #     if words[i]==word1 and w1c>-1:
-        #         # second match
-        #         if abs(i-w2c)<abs(w1c-w2c):
-        #     elif words[i]==word2 and w2c==-1:
-        #         w2c=i
-        #     if w1c > -1 and w2c > -1:
-        #         return abs(w1c-w2c)
-        # return 0
+        
+        '''
+        App 1
+        T.C - O(n^2)
+        S.C - O(n)
+        '''
         w1=[]
         w2=[]
         for i in range(len(words)):
@@ -27,4 +20,20 @@ class Solution:
                     res=abs(w1[i]-w2[j])
         # return abs(min(w1)-min(w2))
         return res
-        
+        '''
+        App 2
+        T.C - O(n)
+        S.C = O(1)
+        '''
+#         size = len(words)
+#         w1,w2=size,size
+#         ans = size
+
+#         for i in range(size):
+#             if words[i] == word1:
+#                 w1 = i
+#                 ans = min(ans, abs(w1-w2))
+#             elif words[i] == word2:
+#                 index2 = i
+#                 ans = min(ans, abs(w1-w2))
+#         return ans
