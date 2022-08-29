@@ -18,4 +18,8 @@ class Solution:
                     break
         return True
             
+        """
+        T.C - O(n) => n=numbet of characters in entire words list
+        S.C - O(1) => For dict
+        """
             
