@@ -12,3 +12,8 @@ class Solution:
                 return c 
         return c
     
+    '''
+    T.C - O(nlogn)+O(n) = O(nlogn)
+    S.C - O(1)
+    '''
+    
