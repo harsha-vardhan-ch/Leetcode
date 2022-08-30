@@ -1,6 +1,10 @@
 class Solution:
     def removeDuplicates(self, s: str) -> str:
         '''
+        App 1
+        Time limit exceeded
+        '''
+        '''
         n=len(s)
         arr=[i for i in s]
         t=s
@@ -15,6 +19,12 @@ class Solution:
             else:
                 i+=1
         return "".join(arr)
+        '''
+        '''
+        App 2 
+        Stack
+        T.C - O(n)
+        S.C - O(n-d) , d=length of duplicates
         '''
         res=[s[0]]
         for i in range(1,len(s)):
