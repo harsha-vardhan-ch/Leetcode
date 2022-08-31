@@ -11,14 +11,11 @@ class Solution:
                 lz=0
                 ln+=1
             elif i=="0":
-                # print("ch",lz)
                 if ln>mn:
                     mn=ln
                 ln=0
                 lz+=1
-        if lz>mz:
-            mz=lz
-        if ln>mn:
-            mn=ln
-        print(mn,mz)
+    
+        mz=max(lz,mz)
+        mn=max(ln,mn)
         return True if mn>mz else False
