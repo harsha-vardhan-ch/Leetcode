@@ -17,6 +17,9 @@ class Solution:
     
         '''
         App 2
+        
+        T.C - O(m)
+        S.C - O(k) - for k unique chars
         '''
         if len(ransomNote) > len(magazine):
             return False
