@@ -3,14 +3,18 @@ class Solution:
         d={}
         arr2=sorted(arr)
         ind=0
-        v=0
+        rank=0
         while ind<len(arr2):
-            # print(ind,arr2[ind])
             if d.get(arr2[ind],-1)<0:
-                d[arr2[ind]]=v
-                v+=1
+                d[arr2[ind]]=rank
+                rank+=1
             ind+=1
-        # print(d)
+        '''
+        for i in arr2:
+        if i not in d:
+            d[i]=rank
+            rank+=1
+        '''   
         res=[]
         for i in arr:
             res.append(d[i]+1)
