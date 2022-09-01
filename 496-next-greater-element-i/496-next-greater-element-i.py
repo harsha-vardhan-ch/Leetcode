@@ -1,17 +1,6 @@
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
-        # r=[]
-        # d={}
-        # d[nums2[-1]]=-1
-        # for i in range(len(nums2)-2,-1,-1):
-        #     if nums2[i]<nums2[i+1]:
-        #         d[nums2[i]]=nums2[i+1]
-        #     else:
-        #         d[nums2[i]]=d[nums2[i+1]]
-        # #print(d)
-        # for i in nums1:
-        #     r.append(d[i])
-        # return r
+        
         '''
         App 1 - BruteForce
         T.C - O(m.n)
@@ -31,22 +20,41 @@ class Solution:
         # return res
         
         '''
-        App 2
-        
+        App 2 - Better BruteForce
+        T.C - O(m.n)
+        S.C - O(n)
         '''
+        # d={}
+        # for ind,val in enumerate(nums2):
+        #     d[val]=ind
+        # # print(d)
+        # res=[]
+        # for i in nums1:
+        #     suc=0
+        #     k=d[i]     // Optimized retrieval here
+        #     for j in range(k,len(nums2)):
+        #         if nums2[j]>i:
+        #             res.append(nums2[j])
+        #             suc=1
+        #             break
+        #     if suc==0:
+        #         res.append(-1)
+        # return res
+    
+        '''
+        App 3 - Stack
+        '''
+        r=[-1]
         d={}
-        for ind,val in enumerate(nums2):
-            d[val]=ind
+        for i in range(len(nums2)):
+            # print(r[-1],nums2[i])
+            while len(r)>0 and nums2[i]>r[-1]:
+                d[r.pop()]=nums2[i]
+            r.append(nums2[i])
+        while len(r)>0:
+            d[r.pop()]=-1
         # print(d)
         res=[]
         for i in nums1:
-            suc=0
-            k=d[i]
-            for j in range(k,len(nums2)):
-                if nums2[j]>i:
-                    res.append(nums2[j])
-                    suc=1
-                    break
-            if suc==0:
-                res.append(-1)
+            res.append(d[i])
         return res
