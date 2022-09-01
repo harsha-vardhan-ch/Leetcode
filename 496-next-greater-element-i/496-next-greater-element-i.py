@@ -12,10 +12,36 @@ class Solution:
         # for i in nums1:
         #     r.append(d[i])
         # return r
+        '''
+        App 1 - BruteForce
+        T.C - O(m.n)
+        S.C - O(1)
+        '''
+        # res=[]
+        # for i in nums1:
+        #     suc=0
+        #     k=nums2.index(i)
+        #     for j in range(k,len(nums2)):
+        #         if nums2[j]>i:
+        #             res.append(nums2[j])
+        #             suc=1
+        #             break
+        #     if suc==0:
+        #         res.append(-1)
+        # return res
+        
+        '''
+        App 2
+        
+        '''
+        d={}
+        for ind,val in enumerate(nums2):
+            d[val]=ind
+        # print(d)
         res=[]
         for i in nums1:
             suc=0
-            k=nums2.index(i)
+            k=d[i]
             for j in range(k,len(nums2)):
                 if nums2[j]>i:
                     res.append(nums2[j])
