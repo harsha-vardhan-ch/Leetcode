@@ -53,13 +53,13 @@ class Solution:
                     y-=1
                 # if check(x,y):
                 #     suck=1
-                if i == (len(ins) - 1) and ((x==0 and y==0) or face != 'N'):
+                if i == (n-1) and ((x==0 and y==0) or face != 'N'):
                     # print('hv')
                     return True
                 ar.append((x,y))         
             else:
                 face = chgdir(face,ins[i])
-                if i == (len(ins) - 1) and ((x==0 and y==0) or face != 'N'):
+                if i == (n-1) and ((x==0 and y==0) or face != 'N'):
                     return True
             # print(x,y)
             # print(ins[i],ar,face)
