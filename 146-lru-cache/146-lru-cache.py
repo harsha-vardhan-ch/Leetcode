@@ -11,8 +11,10 @@ class LRUCache:
         # print(self)
         if key not in self.cache:
             return - 1
+        # accessed key, so bringing it to end
         self.cache.move_to_end(key)
         # print(self.cache,self.cache[key])
+        # since it is in end, returning it directly
         return self.cache[key]
 
 
@@ -20,10 +22,11 @@ class LRUCache:
         
         if key in self.cache:
             self.cache.move_to_end(key)
+            # print(key,self.cache,"bef")
         self.cache[key] = value
         # print(self.cache)
         if len(self.cache) > self.remain:
-            self.cache.popitem(last = False)
+            self.cache.popitem(last = False) # evicting the first 
 
 
 
