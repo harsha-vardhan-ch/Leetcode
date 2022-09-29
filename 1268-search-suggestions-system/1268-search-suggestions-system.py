@@ -17,6 +17,8 @@ class Solution:
         # return res
     
         # Binary Search
+        # time: O(nlogn) ---> python timsort
+# space: O(n) ---> might need to scan the entire input array
         products.sort() # time O(nlogn)
         array_len = len(products)
         ans = []
